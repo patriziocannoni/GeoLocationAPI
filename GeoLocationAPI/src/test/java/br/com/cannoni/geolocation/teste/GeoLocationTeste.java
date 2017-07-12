@@ -17,7 +17,7 @@ import br.com.cannoni.geolocation.service.GeoLocationInterface;
  * @since 28/02/2015
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "classpath:applicationContext-test.xml" })
+@ContextConfiguration({"classpath:applicationContext-test.xml"})
 public class GeoLocationTeste {
 
 	@Autowired
@@ -28,8 +28,8 @@ public class GeoLocationTeste {
 		GeoLocalizacao localizacao = geoLocationInterface.obterGeoLocalizacaoPorEndereco("Avenida dos Carvalhos Carapicuíba");
 		
 		Assert.assertNotNull(localizacao);
-		Assert.assertEquals(BigDecimal.valueOf(-23.563468), localizacao.getLatitude());
-		Assert.assertEquals(BigDecimal.valueOf(-46.8687953), localizacao.getLongitude());
+		Assert.assertEquals(BigDecimal.valueOf(-23.5636892), localizacao.getLatitude());
+		Assert.assertEquals(BigDecimal.valueOf(-46.869524), localizacao.getLongitude());
 	}
 
 }
